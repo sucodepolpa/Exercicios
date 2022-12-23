@@ -1,32 +1,17 @@
-//1.  faca um programa simples que leia dois inteiros via teclado (com somente um scanf) e imprima sua soma.
-// RESOLUCAO 1:
+//1.  (PT-BR) Faça um programa simples que leia dois inteiros via teclado (com somente um scanf) e imprima sua soma.
+// (ENG) Create a simple program that reads two integers via user input (using only one scanf) and prints out their sum.
 
+// RESULTADO:
 #include <stdio.h>
 
 int main(void)
 {
-    int idade, altura;
-    int soma;
-    soma = idade + altura;
+    int idade = 0;
+    int altura = 0;
+    int soma = 0;
     printf("qual sua idade e altura em cm? ");
-    scanf("%d %d", idade, altura);
-    printf("a soma da sua idade e altura é: %d", soma);
-    return 0;
-}
-
-// RESOLUCAO 2:
-
-#include <stdio.h>
-
-int main(void)
-{
-    int idade, altura;
-    int soma;
+    scanf("%d, %d", &idade, &altura);
     soma = idade + altura;
-    printf("qual sua idade? ");
-    scanf("%d", idade);
-    printf("qual sua altura em cm? ");
-    scanf("%d", altura);
-    printf("a soma da sua idade e altura é: %d", soma);
+    printf("a soma da sua idade e altura é: %d\n", soma);
     return 0;
 }
