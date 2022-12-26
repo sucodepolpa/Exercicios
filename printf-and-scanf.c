@@ -16,7 +16,25 @@ int main(void)
     return 0;
 }
 
-//2. (PT-BR) Escreva um programa que pergunte ao usuário seu nome, idade e letra favorita do alfabeto. Imprima uma única frase contendo todas as informações.
+//2. (PT-BR) Escreva um programa que peça ao usuário que digite dois números inteiros. Depois, imprima os números na tela.
+//(ENG) Write a program that asks the user to enter two integers. Then print the numbers on the screen.
+
+//RESULT:
+#include <stdio.h>
+
+int main(void)
+{
+    int num1, num2;
+
+    printf("Entre com dois números inteiros: ");
+    scanf("%d, %d", &num1, &num2);
+
+    printf("Os números lidos foram %d e %d\n", num1, num2);
+
+    return 0;
+}
+
+//3. (PT-BR) Escreva um programa que pergunte ao usuário seu nome, idade e letra favorita do alfabeto. Imprima uma única frase contendo todas as informações.
 // (ENG) Write a program that asks the user their name, age, and favorite letter of the alphabet. Print a single sentence containing all the information.
 
 //RESULT:
