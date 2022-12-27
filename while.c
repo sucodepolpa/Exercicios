@@ -27,4 +27,23 @@ int main(void)
 //(ENG) Given a sequence of integers different from zero, terminated by zero, calculate the sum of the numbers in the sequence.
 
 //RESULT:
+#include <stdio.h>
 
+int main(void)
+{
+    // declaracoes
+    int num;
+    int soma = 0;
+    // programa
+    printf("Digite o primeiro numero de uma sequencia de numeros inteiros diferentes de zero, terminada por zero: ");
+    scanf("%d", &num);
+
+    while(num != 0)
+    {
+        soma = num + soma;
+        printf("digite o proximo numero da sequencia: ");
+        scanf("%d", &num);
+    }
+    printf("a soma da sequencia é %d.\n", soma);
+    return 0;
+}
