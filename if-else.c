@@ -41,4 +41,31 @@ int main(void)
     return 0;
 }
 
-//3.
+//3. Dados um numero inteiro n > 0 e uma sequencia com n numeros inteiros, determinar a soma dos inteiros positivos
+// da sequencia. Por exemplo, para n = 7 e para a sequencia com n = 7 numeros inteiros: 6, − 2, 7, 0, − 5, 8, 4.
+// o seu programa deve escrever o numero 25.
+#include <stdio.h>
+
+int main(void)
+{
+    //dec
+    int n, soma = 0, num;
+    //prog
+    printf("Digite uma sequencia de numeros inteiros iniciada por um numero positivo.\n");
+    printf("Digite a quantidade de numeros da sequencia: ");
+    scanf("%d", &n);
+
+    while(n > 0)
+    {
+        printf("Digite um numero: ");
+        scanf("%d", &num);
+    }
+
+    if(num > 0)
+    {
+        soma = soma + num;
+    }
+
+    printf("A soma dos numeros positivos digitados é %d.\n", soma);
+    return 0;
+}
