@@ -69,3 +69,33 @@ int main(void)
     printf("A soma dos numeros positivos digitados é %d.\n", soma);
     return 0;
 }
+
+//Dados um numero inteiro n>0, e um dıgito d (0<=d<=9), determinar quantas vezes d ocorre em n. Por exemplo, 3
+//ocorre 2 vezes em 63453.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    //
+    int num1, num2, count, resto, n;
+    //
+    printf("digite um numero inteiro maior que 0: ");
+    scanf("%d", &n);
+    printf("agora digite um numero inteiro maior ou igual a 0 e menor ou igual a 9: ");
+    scanf("%d", &num2);
+    count = 0;
+    num1 = n;
+    while(num1 > 0)
+    {
+        resto = num1 % 10;
+        num1 = num1 / 10;
+    }
+
+    if(resto == num2)
+    {
+        count++;
+    }
+    printf("o numero %d aparece %d vezes em %d.\n", num2, count, n);
+    return 0;
+}
