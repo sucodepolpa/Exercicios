@@ -91,7 +91,7 @@ int main(void)
         resto = num1 % 10;
         num1 = num1 / 10;
     }
-
+    
     if(resto == num2)
     {
         count++;
