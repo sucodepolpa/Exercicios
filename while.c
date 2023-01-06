@@ -47,3 +47,26 @@ int main(void)
     printf("a soma da sequencia é %d.\n", soma);
     return 0;
 }
+
+//Dada uma sequencia de numeros inteiros diferentes de zero, terminada por um zero, calcular a sua soma.
+
+#include <stdio.h>
+
+int main(void)
+{
+    //
+    int qtd, num;
+    int soma = 0;
+    //
+    printf("digite a quantidade de numeros da sua sequencia, contando o zero: ");
+    scanf("%d", &qtd);
+        while (qtd > 0)
+        {
+            printf("digite um numero (lembre-se que sua sequencia deve terminar com um 0): ");
+            scanf("%d", &num);
+            qtd--;
+            soma = soma + num;
+        }
+    printf("o resultado da soma dos numeros da sequencia eh %d.\n", soma);
+    return 0;
+}
