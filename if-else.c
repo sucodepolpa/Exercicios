@@ -99,3 +99,33 @@ int main(void)
     printf("o numero %d aparece %d vezes em %d.\n", num2, count, n);
     return 0;
 }
+
+// Dado um inteiro n>0, calcular a soma dos divisores positivos de n.
+
+#include <stdio.h>
+
+int main(void)
+{
+    //
+    int num;
+    int soma = 0;
+    int i = 1;
+    //
+    printf("digite um numero: ");
+    scanf("%d", &num);
+    while(i != num)
+    {
+        if ((num % i) != 0)
+        {
+            i++;
+        }
+        else
+        {
+            soma = soma + i;
+            i++;
+        }
+    }
+
+    printf("a soma dos divisores de %d, sem contar ele mesmo, eh %d.\n", num, soma);
+    return 0;
+}
