@@ -70,3 +70,24 @@ int main(void)
     printf("o resultado da soma dos numeros da sequencia eh %d.\n", soma);
     return 0;
 }
+
+// Dado um numero inteiro n>0, determinar a soma dos dıgitos de n. Por exemplo, a soma dos dıgitos de 63453 eh 21.
+
+#include <stdio.h>
+
+int main(void)
+{
+    //
+    int num, div, soma = 0;
+    //
+    printf("digite um numero: ");
+    scanf("%d", &num);
+    while (num != 0)
+    {
+        div = num % 10;
+        soma = soma + div;
+        num = num / 10;
+    }
+    printf("o resultado da soma dos digitos do numero eh %d.\n", soma);
+    return 0;
+}
