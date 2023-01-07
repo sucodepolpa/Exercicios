@@ -121,3 +121,25 @@ int main(void)
     printf("a soma dos divisores de %d, sem contar ele mesmo, eh %d.\n", num, soma);
     return 0;
 }
+
+// Dado um numero inteiro n>=0, determinar o seu fatorial.
+
+#include <stdio.h>
+
+int main(void)
+{
+    //
+    int num;
+    int i = 1;
+    int fat = 1;
+    //
+    printf("digite um numero inteiro maior ou igual a zero: ");
+    scanf("%d", &num);
+    while (i <= num)
+    {
+        fat = i * fat;
+        i++;
+    }
+    printf("o fatorial de %d eh %d.\n", num, fat);
+    return 0;
+}
