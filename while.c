@@ -137,6 +137,10 @@ int main(void)
     scanf("%d", &num);
     while (i <= num)
     {
+        if (num == 0)
+        {
+            fat = 1 * 1;
+        }
         fat = i * fat;
         i++;
     }
