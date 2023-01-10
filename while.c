@@ -147,3 +147,28 @@ int main(void)
     printf("o fatorial de %d eh %d.\n", num, fat);
     return 0;
 }
+
+// Exercıcio: Dados dois inteiros x e n>0, calcular x elevado a n.
+
+#include <stdio.h>
+
+int main(void)
+{
+    //
+    int x, n, res, c; //res para resultado e c para cumulativo
+    int i = 1;
+    //
+    printf("digite um numero inteiro: ");
+    scanf("%d", &x);
+    printf("agora digite um numero inteiro maior do que zero: ");
+    scanf("%d", &n);
+    c = x;
+    while (i < n)
+    {
+        c = c * x;
+        i++;
+    }
+    res = c;
+    printf("%d elevado a %d eh %d.\n", x, n, res);
+    return 0;
+}
