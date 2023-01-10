@@ -172,3 +172,26 @@ int main(void)
     printf("%d elevado a %d eh %d.\n", x, n, res);
     return 0;
 }
+
+// Dado um numero inteiro positivo n, calcular a soma dos n primeiros numeros naturais.
+#include <stdio.h>
+
+int main(void)
+{
+    //
+    int n;
+    int soma = 0;
+    int i = 0;
+    int j = 0;
+    //
+    printf("digite um numero inteiro positivo: ");
+    scanf("%d", &n);
+    while (i < n)
+    {
+        soma = soma + j;
+        j++;
+        i++;
+    }
+    printf("a soma dos %d primeiros numeros naturais eh %d.\n", n, soma);
+    return 0;
+}
