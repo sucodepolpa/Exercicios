@@ -140,8 +140,8 @@ int main(void)
     int n; // numero digitado
     int count = 3; // contador de n
     int fant = 1; // valor anterior de F a partir da terceira posicao na sequencia de fibonacci
-    int fatu = 1; // valor atual de F na terceira posicao na sequencia de fibonacci
-    int res = 0; // resultado de F
+    int fatu = 1; // valor atual de F
+    int res = 0; // resultado de F (proximo valor)
     //
     printf("digite um numero inteiro maior que zero: ");
     scanf("%d", &n);
