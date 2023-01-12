@@ -23,3 +23,23 @@ int main(void)
     }
     return 0;
 }
+
+// Dizemos que um numero eh triangular se ele eh produto de tres numeros naturais consecutivos (e.g.: 120 eh
+// triangular pois 120 = 4 × 5 × 6). Dado um natural n>0, determinar se n eh triangular.
+#include <stdio.h>
+
+int main(){
+  // inicializacoes
+  int num, x = 1;
+  // programa
+  printf("digite um numero inteiro maior que zero: ");
+  scanf("%d", &num);
+  for(x = 1; x * (x + 1) * (x + 2) < num; x++);
+  if(x * (x + 1) * (x + 2) == num){
+    printf("%d eh triangular (produto de %d*%d*%d).\n", num, x, x+1, x+2);
+  }
+  else{
+    printf("%d nao eh triangular.\n", num);
+  }
+  return 0;
+}
