@@ -195,3 +195,34 @@ int main(void)
     printf("a soma dos %d primeiros numeros naturais eh %d.\n", n, soma);
     return 0;
 }
+
+// Um matematico italiano da idade media conseguiu modelar o ritmo de crescimento da populacao de
+// coelhos atraves de uma sequencia de numeros naturais que passou a ser conhecida como sequencia de Fibonacci. Faca um programa que, dado n>0, calcula Fn.
+
+#include <stdio.h>
+
+int main(void)
+{
+    //
+    int n; // numero digitado
+    int count = 3; // contador de n
+    int fant = 1; // valor anterior de F a partir da terceira posicao na sequencia de fibonacci
+    int fatu = 1; // valor atual de F na terceira posicao na sequencia de fibonacci
+    int res = 0; // resultado de F
+    //
+    printf("digite um numero inteiro maior que zero: ");
+    scanf("%d", &n);
+    if(n <= 2){
+        res = 1;
+    }
+    else{
+        while(count <= n){
+            res = fatu + fant;
+            fant = fatu;
+            fatu = res;
+            count++;
+        }
+    }
+    printf("na sequencia de fibonacci, a posicao %d corresponde ao numero %d.\n", n, res);
+    return 0;
+}
