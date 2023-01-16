@@ -226,3 +226,35 @@ int main(void)
     printf("na sequencia de fibonacci, a posicao %d corresponde ao numero %d.\n", n, res);
     return 0;
 }
+
+// Dados dois naturais n>0 e m>0, determinar entre todos os pares de numeros inteiros (x,y) tais que
+// 0 ≤ x ≤ n e 0 ≤ y ≤ m, um par para o qual o valor da expressao x × y − x2 + y seja maximo e calcular tambem este maximo.
+
+#include <stdio.h>
+
+int main() {
+  //
+  int n, m, x, y, v;
+  int max = 0, max_x = 0, max_y = 0;
+  //
+  printf("digite um numero natural maior que 0: ");
+  scanf("%d", &n);
+  printf("digite outro numero natural maior que 0: ");
+  scanf("%d", &m);
+  x=0;
+  while(x <= n){
+    y=0;
+    while (y <= m){
+      v = x*y - (x*x) + y;
+      if(v > max){
+        max = v;
+        max_x = x;
+        max_y = y;
+      }
+      y++;
+    }
+    x++;
+  }
+  printf("O valor maximo = %d em x = %d e y = %d\n" , max , max_x , max_y);
+  return 0;
+}
