@@ -314,3 +314,26 @@ int main(){
     printf("a soma dos numeros pares da sequencia resulta em %d.\n", soma);
     return 0;
 }
+
+// Dado um inteiro não-negativo n, determinar n!
+#include <stdio.h>
+int main(){
+    //
+    int n, i, fat;
+    //
+    printf("digite um inteiro nao negativo para saber seu fatorial: ");
+    scanf("%d", &n);
+    if(n == 0){
+        printf("o fatorial de 0 é 1.\n");
+    }
+    else{
+    i = n;
+    fat = n;
+    while(i > 1){
+        fat = fat * (i - 1);
+        i--;
+    }
+    printf("o fatorial de %d é %d.\n", n, fat);
+    }
+    return 0;
+}
