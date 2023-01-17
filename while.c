@@ -337,3 +337,37 @@ int main(){
     }
     return 0;
 }
+
+// Dados n e dois números inteiros positivos i e j diferentes de 0, imprimir em ordem crescente
+// os n primeiros naturais que são múltiplos de i ou de j e ou de ambos. Exemplo: Para n = 6 , i = 2 e j = 3 a saída deverá ser : 0,2,3,4,6,8.
+#include <stdio.h>
+int main(){
+    //
+    int n, i, j, // dados de entrada
+    num = 0,     // contador
+    x = 0;       // candidato a multiplo
+    //
+    printf("digite um numero inteiro maior que zero: ");
+    scanf("%d", &n);
+    printf("agora digite dois inteiros positivos diferentes de zero (separados por um espaço): ");
+    scanf("%d %d", &i, &j);
+    while(num < n){
+            if ((x % i == 0) && (x % j == 0)){
+                printf("%d eh multiplo de ambos os numeros.\n", x);
+                x++;
+            }
+            if((x % i == 0) && (x % j != 0)){
+                printf("%d eh multiplo de %d.\n", x, i);
+                x++;
+            }
+            if((x % j == 0) && (x % i != 0)){
+                printf("%d eh multiplo de %d.\n", x, j);
+                x++;
+            }
+            else{
+               x++;
+            }
+            num++;
+        }
+        return 0;
+    }
