@@ -291,3 +291,26 @@ int main(){
     printf("a maior nota obtida na turma foi %d. a menor nota obtida na turma foi %d.\n", maiornota, menornota);
     return 0;
 }
+
+// Dados n e uma seqüência de n números inteiros, determinar a soma dos números pares.
+#include <stdio.h>
+int main(){
+    //
+    int n, seq, i = 1, soma = 0;
+    //
+    printf("digite um numero inteiro maior que zero: ");
+    scanf("%d", &n);
+    while(i <= n){
+        printf("digite o %d numero de uma sequencia de %d numeros: ", i, n);
+        scanf("%d", &seq);
+        if(seq % 2 == 0){
+            soma = soma + seq;
+            i++;
+        }
+        else{
+            i++;
+        }
+    }
+    printf("a soma dos numeros pares da sequencia resulta em %d.\n", soma);
+    return 0;
+}
