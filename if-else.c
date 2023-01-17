@@ -159,3 +159,28 @@ int main(void)
     printf("na sequencia de fibonacci, a posicao %d corresponde ao numero %d.\n", n, res);
     return 0;
 }
+
+// Uma loja de discos anota diariamente durante o mês de março a quantidade de discos vendidos.
+// Determinar em que dia desse mês ocorreu a maior venda e qual foi a quantidade de discos vendida nesse dia.
+#include <stdio.h>
+
+int main(void){
+    //
+    int i = 1, x = 1, dias, maiordia = 0, dia;// quantidade vendida no dia, quantidade no total
+    //
+    while(i <= 31){
+        printf("digite a quantidade de discos vendidos no dia %d: ", x);
+        scanf("%d", &dias);
+        if(dias > maiordia){
+            maiordia = dias;
+            dia = i;
+        }
+        else{
+            ;
+        }
+        i++;
+        x++;
+    }
+    printf("o dia com mais discos vendidos foi o dia %d. a quantidade de discos vendida nesse dia foi %d.\n", dia, maiordia);
+    return 0;
+}
