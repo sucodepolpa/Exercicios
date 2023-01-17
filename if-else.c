@@ -184,3 +184,36 @@ int main(void){
     printf("o dia com mais discos vendidos foi o dia %d. a quantidade de discos vendida nesse dia foi %d.\n", dia, maiordia);
     return 0;
 }
+
+// Dados o número n de alunos de uma turma de Introdução aos Autômatos a Pilha (MAC 414)
+// e suas notas da primeira prova, determinar a maior e a menor nota obtidas por essa turma (Nota máxima = 100 e nota mínima = 0).
+
+#include <stdio.h>
+int main(){
+    //
+    int i = 1, n, x = 1, nota, maiornota = 0, menornota = 100;
+    //
+    printf("digite a quantidade de alunos da turma MAC414: ");
+    scanf("%d", &n);
+    while (i <= n){
+        printf("digite a nota do aluno %d na prova 1: ", x);
+        scanf("%d", &nota);
+        if(maiornota <= nota){
+            maiornota = nota;
+        }
+
+        else{
+            ;
+        }
+        if(menornota > nota){
+            menornota = nota;
+        }
+        if(menornota < nota){
+            ;
+        }
+        x++;
+        i++;
+    }
+    printf("a maior nota obtida na turma foi %d. a menor nota obtida na turma foi %d.\n", maiornota, menornota);
+    return 0;
+}
